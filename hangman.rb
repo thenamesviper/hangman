@@ -18,7 +18,6 @@ class Hangman
 		while @filtered_word.length < @word.length
 			@filtered_word += "_"
 		end
-		puts self.instance_variables
 		play_game
 	end
 	
@@ -35,8 +34,7 @@ class Hangman
 	
 	def play_game
 			print_board
-			puts self.chosen_letters
-			puts "Please guess a letter"
+			puts "Please guess a letter or type 'save' to continue another time"
 			guess = gets.chomp
 			letter = guess.upcase
 			if letter == "SAVE"
